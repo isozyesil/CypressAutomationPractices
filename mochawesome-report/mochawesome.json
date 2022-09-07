@@ -1,0 +1,100 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-09-07T17:43:23.180Z",
+    "end": "2022-09-07T17:43:43.519Z",
+    "duration": 20339,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b14a5a98-b0ef-4044-8c1f-20f64acd96a2",
+      "title": "",
+      "fullFile": "cypress\\Integration\\Examples\\Test.js",
+      "file": "cypress\\Integration\\Examples\\Test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "77472c4a-71a4-451c-8d76-de03f26c42dd",
+          "title": "My Second Test Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "My FirstTest case",
+              "fullTitle": "My Second Test Suite My FirstTest case",
+              "timedOut": null,
+              "duration": 18163,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const homePage = new _HomePage.default();\nconst product = new _ProductsPage.default();\ncy.visit(Cypress.env('url'));\nhomePage.getEditBox().type(this.data.name);\nhomePage.getGender().select(this.data.gender);\nhomePage.getTwoWayDataBinding().type(this.data.name);\nhomePage.getEditBox().should('have.attr', 'minlength', '2');\nhomePage.getEnterpreneaur().should(\"not.be.enabled\");\nhomePage.getShopTab().click();\nthis.data.productName.forEach(element => {\n  cy.selectProduct(element);\n});\nproduct.getCheckout().click();\ncy.productPrice().then(value => console.log(value)); //expect().to.equal(value,'300000')\ncy.get('.btn.btn-success').click();\ncy.get('#country').type('Turkey').se;\ncy.wait(10000);\ncy.get('.suggestions > ul > li > a').click();\ncy.get('.checkbox > label').click();\ncy.get('.ng-untouched > .btn').click(); //cy.get('.alert').should('have.text','Success! Thank you! Your order will be delivered in next few weeks :-).')\ncy.get('.alert').then(function (element) {\n  const actualText = element.text();\n  expect(actualText.includes(\"Success\"));\n});",
+              "err": {},
+              "uuid": "c658e5be-c450-43dc-8aaf-5e80930226ca",
+              "parentUUID": "77472c4a-71a4-451c-8d76-de03f26c42dd",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c658e5be-c450-43dc-8aaf-5e80930226ca"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 18163,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
